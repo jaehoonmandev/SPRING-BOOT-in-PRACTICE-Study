@@ -1,3 +1,4 @@
+//빌드 과정에서 필요한 기본 정보 포함.
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.4'
@@ -15,18 +16,31 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    all{
+        exclude group:'org.springframework.boot', module: 'spring-boot-starter-logging' // 기본 spring log 기능 제외
+    }
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral() //maven 중앙 저장소
 }
 
 dependencies {
+    /**
+     * 1) implementation : 프로젝트 컴파일 과정에서 필요한 라이브러리.
+     * 2) providedCompile : compile 시에는 필요하지만, 배포시에 제외될 dependency를 설정한다. (war plugin이 설정된 경우에만 사용 가능 하다)
+     * 3) providedRuntime : runtime 시에만 필요하고, 실행환경에서 제공되는 dependency를 설정한다.(war plugin이 설정된 경우에만 사용 가능 하다)
+     * 4) testImplementation : test 시에 필요한 dependency 관리.
+     */
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-log4j2'
 }
 
 tasks.named('test') {

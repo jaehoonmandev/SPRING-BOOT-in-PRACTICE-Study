@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SPRING-BOOT-in-PRACTICE-Study.iml" filepath="$PROJECT_DIR$/.idea/SPRING-BOOT-in-PRACTICE-Study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPRING-BOOT-in-PRACTICE-Study.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SPRING-BOOT-in-PRACTICE-Study.main.iml" />
     </modules>
   </component>
 </project>

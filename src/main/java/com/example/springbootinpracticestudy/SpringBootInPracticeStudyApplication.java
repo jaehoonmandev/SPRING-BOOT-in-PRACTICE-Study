@@ -4,9 +4,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+
+/**
+ * @EnableConfigurationProperties는 일일이 클래스를 넣어줘야하는대신
+ * @ConfigurationPropertiesScan은 @ConfigurationProperties가 붙어있는 클래스를 모두 탐색해서
+ * 스프링 컨테이너에 등록
+ */
+//@EnableConfigurationProperties(AppProperties.class)
+@ConfigurationPropertiesScan
 public class SpringBootInPracticeStudyApplication {
 
     //로그 설정
@@ -35,10 +46,14 @@ public class SpringBootInPracticeStudyApplication {
 
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootInPracticeStudyApplication.class,args);
 
-        DbConfiguration dbConfiguration =
-                applicationContext.getBean(DbConfiguration.class);
+//        DbConfiguration dbConfiguration =
+//                applicationContext.getBean(DbConfiguration.class);
+//
+//        log.info(dbConfiguration.toString());
 
-        log.info(dbConfiguration.toString());
+        AppService appService =
+                applicationContext.getBean(AppService.class);
+        log.info(appService.getAppProperties().toString());
 
 
 
