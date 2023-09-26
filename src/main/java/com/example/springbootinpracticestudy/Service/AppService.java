@@ -1,5 +1,6 @@
-package com.example.springbootinpracticestudy;
+package com.example.springbootinpracticestudy.Service;
 
+import com.example.springbootinpracticestudy.AppProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

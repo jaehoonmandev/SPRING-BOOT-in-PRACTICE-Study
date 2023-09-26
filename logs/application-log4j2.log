@@ -1,0 +1,32 @@
+2023-09-26 23:54:32.497 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 8.0.1.Final
+2023-09-26 23:54:32.510 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : Starting CourseTrackerApplication using Java 17.0.2 with PID 29127 (/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/build/classes/java/main started by jaehoonman in /Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study)
+2023-09-26 23:54:32.512 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-09-26 23:54:32.958 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-26 23:54:32.959 [ INFO] [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-09-26 23:54:32.959 [ INFO] [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-09-26 23:54:32.992 [ INFO] [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-09-26 23:54:33.132 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2023-09-26 23:54:33.142 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : Started CourseTrackerApplication in 0.782 seconds (process running for 1.317)
+2023-09-26 23:54:33.143 [ INFO] [  restartedMain] c.e.s.M.MyCommandLineRunner              : MyCommandLineRunner executed as a Spring Component
+2023-09-26 23:54:33.143 [ INFO] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : CourseTrackerApplication CommandLineRunner has executed
+2023-09-26 23:54:33.161 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : ConstraintViolationImpl{interpolatedMessage='1보다 높아야함', propertyPath=rating, rootBeanClass=class com.example.springbootinpracticestudy.Model.Course, messageTemplate='1보다 높아야함'}
+2023-09-27 00:17:46.094 [ INFO] [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-27 00:17:46.096 [ INFO] [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-09-27 00:17:46.098 [ INFO] [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-09-27 00:32:32.990 [ INFO] [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 8.0.1.Final
+2023-09-27 00:32:33.005 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : Starting CourseTrackerApplication using Java 17.0.2 with PID 29330 (/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/build/classes/java/main started by jaehoonman in /Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study)
+2023-09-27 00:32:33.006 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-09-27 00:32:33.413 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-27 00:32:33.414 [ INFO] [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-09-27 00:32:33.414 [ INFO] [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-09-27 00:32:33.438 [ INFO] [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-09-27 00:32:33.574 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2023-09-27 00:32:33.584 [ INFO] [  restartedMain] c.e.s.M.CourseTrackerApplication         : Started CourseTrackerApplication in 0.713 seconds (process running for 1.144)
+2023-09-27 00:32:33.585 [ INFO] [  restartedMain] c.e.s.M.MyCommandLineRunner              : MyCommandLineRunner executed as a Spring Component
+2023-09-27 00:32:33.604 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Password for user1 do not adhere to the password policy
+2023-09-27 00:32:33.606 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Violation details: [비밀번호 규율을 지키세요].
+2023-09-27 00:32:33.607 [ INFO] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Password for user2 adhere to the password policy
+2023-09-27 00:32:33.607 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Password for user3 violates maximum repetitive rule
+2023-09-27 00:32:33.607 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Violation details: [비밀번호 규율을 지키세요].
+2023-09-27 00:32:33.608 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Password for user4 violates special character rule
+2023-09-27 00:32:33.608 [ERROR] [  restartedMain] CourseTrackerApplication$$SpringCGLIB$$0 : Violation details: [비밀번호 규율을 지키세요].
