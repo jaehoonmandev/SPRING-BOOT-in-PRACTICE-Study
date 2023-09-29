@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="학습기록">
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="학습기록 - JPA PagingAndSorting">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/sbip.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbConfig.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +21,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/ch04">
       <ProjectState />
     </projectState>
   </component>
@@ -70,33 +72,34 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -122,7 +125,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData">
+  <component name="RunManager" selected="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses">
     <configuration name="SpringBootInPracticeStudyApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
       <extension name="coverage">
@@ -134,6 +137,22 @@
       <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
       <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
+      <option name="METHOD_NAME" value="givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,16 +205,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootInPracticeStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="SPRING-BOOT-in-PRACTICE-Study.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Ch04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ch04.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ch04.Ch04Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,20 +220,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
       <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" />
       <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData" />
       <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
       <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
       <item itemvalue="Spring Boot.boot" />
-      <item itemvalue="Spring Boot.SpringBootInPracticeStudyApplication" />
+      <item itemvalue="Spring Boot.Ch04Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
+        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
         <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData" />
         <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" />
         <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
-        <item itemvalue="Spring Boot.SpringBootInPracticeStudyApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +252,7 @@
       <workItem from="1695730883556" duration="659000" />
       <workItem from="1695731549089" duration="10319000" />
       <workItem from="1695992754358" duration="5728000" />
-      <workItem from="1695999138184" duration="979000" />
+      <workItem from="1695999138184" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -273,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695998824082</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="학습기록 - JPA PagingAndSorting">
+      <option name="closed" value="true" />
+      <created>1696000289794</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696000289794</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +303,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. 학습기록" />
     <MESSAGE value="학습기록" />
-    <option name="LAST_COMMIT_MESSAGE" value="학습기록" />
+    <MESSAGE value="학습기록 - JPA PagingAndSorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="학습기록 - JPA PagingAndSorting" />
   </component>
 </project>

@@ -9,6 +9,16 @@ import java.util.Objects;
 
 @Entity //JPA 엔티티 표시
 @Table(name = "COURSES") //저장되는 테이블 이름으로 사용.
+//실행될 쿼리문을 직접 작성하는 NamedQuery, JPQL의 문법에 맞게 작성한다.
+@NamedQuery(name = "Course.findAllByCategoryAndRating",
+        query = "select c from Course c where c.category=?1 and c.rating=?2")
+//복수 지정 가능.
+//@NamedQueries({
+//        @NamedQuery(name = "Course.findAllBy...",
+//                query = "select c from ..."),
+//        @NamedQuery(name = "Course.findAllBy...",
+//                query = "select c from ...")
+//})
 public class Course {
     @Id
     @Column(name = "ID")
