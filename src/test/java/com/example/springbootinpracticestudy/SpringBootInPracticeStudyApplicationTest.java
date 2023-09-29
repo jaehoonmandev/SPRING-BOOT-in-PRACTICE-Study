@@ -2,42 +2,59 @@ package com.example.springbootinpracticestudy;
 
 import com.example.springbootinpracticestudy.Model.Course;
 import com.example.springbootinpracticestudy.Repository.CourseRepository;
-import com.example.springbootinpracticestudy.Repository.CustomizedCourseRepository;
+import org.assertj.core.api.Condition;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Arrays;
-import java.util.List;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+@DataJpaTest
 class SpringBootInPracticeStudyApplicationTest {
 
     @Autowired
     private CourseRepository courseRepository;
 
     @Test
-    public void givenCreateCourseWhenLoadTheCourseThenExpectSameCourse() {
-        courseRepository.saveAll(getCourseList());
-        assertThat(courseRepository.findAllByCategory("Spring")).hasSize(3);
-        assertThat(courseRepository.existsByName("JavaScript for All")).isTrue();
-        assertThat(courseRepository.existsByName("Mastering JavaScript")).isFalse();
-        assertThat(courseRepository.countByCategory("Python")).isEqualTo(2);
-        assertThat(courseRepository.findByNameStartsWith("Getting Started")).hasSize(3);
+    void givenDataAvailableWhenLoadFirstPageThenGetFiveRecords() {
+        Pageable pageable = PageRequest.of(0,5); // 0페이지, 페이지당 5건 데이터.
+        assertThat(courseRepository.findAll(pageable)).hasSize(5);
+        assertThat(pageable.getPageNumber()).isEqualTo(0);
+
+        Pageable nextPageable = pageable.next(); // 다음 페이지.
+        assertThat(courseRepository.findAll(nextPageable)).hasSize(4);
+        assertThat(nextPageable.getPageNumber()).isEqualTo(1);
     }
 
-    private List<Course> getCourseList() {
-        Course rapidSpringBootCourse = new Course("Rapid Spring Boot Application Development", "Spring", 4,"Spring Boot gives all the power of the Spring Framework without all of the complexity");
-        Course springSecurityDslCourse = new Course("Getting Started with Spring Security DSL", "Spring", 5, "Learn Spring Security DSL in easy steps");
-        Course springCloudKubernetesCourse = new Course("Getting Started with Spring Cloud Kubernetes", "Spring", 3, "Master Spring Boot application deployment with Kubernetes");
-        Course rapidPythonCourse = new Course("Getting Started with Python", "Python", 5, "Learn Python concepts in easy steps");
-        Course gameDevelopmentWithPython = new Course("Game Development with Python", "Python", 3, "Learn Python by developing 10 wonderful games");
-        Course javaScriptForAll = new Course("JavaScript for All", "JavaScript", 4, "Learn basic JavaScript syntax that can apply to anywhere");
-        Course javaScriptCompleteGuide = new Course("JavaScript Complete Guide", "JavaScript", 5, "Master JavaScript with Core Concepts and Web Development");
+    @Test
+    void givenDataAvailableWhenSortsFirstPageThenGetSortedSData() {
+        //이름 기준 오름차순
+        Pageable pageable = PageRequest.of(0,5, Sort.by(Sort.Order.asc("Name")));
 
-        return Arrays.asList(rapidSpringBootCourse, springSecurityDslCourse, springCloudKubernetesCourse, rapidPythonCourse, gameDevelopmentWithPython, javaScriptForAll, javaScriptCompleteGuide);
+        //조건
+        Condition<Course> sortedFirstCourseCondition = new Condition<Course>() {
+            @Override
+            public boolean matches(Course course) {
+                //넣은 데이터 정렬 됐는지 확인.
+                return course.getId() == 4 && course.getName().equals("Cloud Native Spring Boot Application Development");
+            }
+        };
+        assertThat(courseRepository.findAll(pageable)).first().has(sortedFirstCourseCondition);
+    }
+
+    @Test
+    void givenDataAvailableWhenApplyCustomSortThenGetSortedResult() {
+        //점수 내림차순, 이름 오름차순 정렬
+        Pageable customSortPageable = PageRequest.of(0,5, Sort.by("Rating").descending().and(Sort.by("Name")));
+        Condition<Course> customSortFirstCourseCondition = new Condition<Course>() {
+            @Override
+            public boolean matches(Course course) {
+                return course.getId() == 2 && course.getName().equals("Getting Started with Spring Security DSL");
+            }
+        };
+        assertThat(courseRepository.findAll(customSortPageable)).first().has(customSortFirstCourseCondition);
     }
 }

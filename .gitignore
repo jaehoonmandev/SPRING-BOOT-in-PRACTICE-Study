@@ -1,0 +1,7 @@
+# : comments
+
+.gradle
+.idea
+gradle
+logs
+out
