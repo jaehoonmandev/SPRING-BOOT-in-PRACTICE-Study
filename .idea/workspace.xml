@@ -4,63 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="1. 학습기록">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplication.java" afterDir="false" />
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="학습기록">
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/SPRING-BOOT-in-PRACTICE-Study.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/AppProperties$Security.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/AppProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Config/DbConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Main/CourseTrackerApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Main/MyCommandLineRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Main/SpringBootInPracticeStudyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Model/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Service/AppService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Validation/Password.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Validation/PasswordRuleValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/SPRING-BOOT-in-PRACTICE-Study-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/SPRING-BOOT-in-PRACTICE-Study-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.springbootinpracticestudy.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.springbootinpracticestudy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Course.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Course.class.uniqueId1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CourseTrackerApplication.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application-log4j2.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application-log4j2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/AppProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Config/DbConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Main/CourseTrackerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Main/MyCommandLineRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Main/SpringBootInPracticeStudyApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Service/AppService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Validation/Password.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Validation/PasswordRuleValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Repository/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/Repository/CustomizedCourseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.springbootinpracticestudy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/sbip.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/dbConfig.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Course.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomizedCourseRepository.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/application-log4j2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +75,8 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -140,7 +123,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "web.server",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -169,20 +152,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenFindAllCoursesThenExpectOneCourse">
-    <configuration name="SpringBootInPracticeStudyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplication" />
-      <module name="SPRING-BOOT-in-PRACTICE-Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse">
     <configuration name="SPRING-BOOT-in-PRACTICE-Study [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,53 +175,50 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="SpringBootInPracticeStudyApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenFindAllCoursesThenExpectOneCourse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenFindAllCoursesThenExpectOneCourse&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
+      <option name="METHOD_NAME" value="givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ch04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ch04" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ch04.Ch04Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.ch04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SpringBootInPracticeStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -275,20 +242,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SpringBootInPracticeStudyApplication" />
       <item itemvalue="Gradle.SPRING-BOOT-in-PRACTICE-Study [clean]" />
-      <item itemvalue="Gradle.SpringBootInPracticeStudyApplicationTest" />
-      <item itemvalue="Gradle.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenFindAllCoursesThenExpectOneCourse" />
+      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
+      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
       <item itemvalue="Spring Boot.boot" />
+      <item itemvalue="Spring Boot.Ch04Application" />
       <item itemvalue="Spring Boot.SpringBootInPracticeStudyApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenFindAllCoursesThenExpectOneCourse" />
-        <item itemvalue="Gradle.SpringBootInPracticeStudyApplicationTest" />
+        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
+        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
         <item itemvalue="Spring Boot.SpringBootInPracticeStudyApplication" />
-        <item itemvalue="Application.SpringBootInPracticeStudyApplication" />
         <item itemvalue="Gradle.SPRING-BOOT-in-PRACTICE-Study [clean]" />
+        <item itemvalue="Spring Boot.Ch04Application" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +272,7 @@
       <workItem from="1695650685033" duration="747000" />
       <workItem from="1695730883556" duration="659000" />
       <workItem from="1695731549089" duration="10319000" />
-      <workItem from="1695992754358" duration="3448000" />
+      <workItem from="1695992754358" duration="5392000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -323,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695739108020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="학습기록">
+      <option name="closed" value="true" />
+      <created>1695996889882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695996889882</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +306,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. 학습기록" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 학습기록" />
+    <MESSAGE value="학습기록" />
+    <option name="LAST_COMMIT_MESSAGE" value="학습기록" />
   </component>
 </project>
