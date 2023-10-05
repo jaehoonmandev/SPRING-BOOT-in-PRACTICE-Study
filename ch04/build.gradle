@@ -22,6 +22,7 @@ dependencies {
 
     //spring-boot-actuator-autoconfigure와 micrometer-core가 포함되어있다
     compileOnly 'org.springframework.boot:spring-boot-starter-actuator'
+    runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
