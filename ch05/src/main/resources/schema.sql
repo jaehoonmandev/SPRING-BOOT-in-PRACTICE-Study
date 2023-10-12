@@ -1,26 +1,21 @@
-DROP TABLE IF EXISTS courses;
-CREATE TABLE courses (
-                         id          BIGINT NOT NULL auto_increment,
-                         category    VARCHAR(255),
-                         description VARCHAR(255),
+create table courses (
+                         id          INT NOT NULL,
                          name        VARCHAR(255),
-                         rating      INTEGER NOT NULL,
+                         category    VARCHAR(255),
+                         rating      int NOT NULL,
+                         description VARCHAR(255),
                          PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS authorities;
-DROP TABLE IF EXISTS users;
-
-create table users(
-                      username varchar(50) not null primary key,
-                      password varchar(500) not null,
-                      enabled boolean not null
+create table ct_users(
+                         ID	BIGINT(19)	NOT NULL,
+                         EMAIL	VARCHAR(255)	NOT NULL,
+                         FIRST_NAME	VARCHAR(255) NOT NULL,
+                         LAST_NAME	VARCHAR(255) NOT NULL,
+                         PASSWORD	VARCHAR(255) NOT NULL,
+                         USERNAME	VARCHAR(255) NOT NULL,
+                         VERIFIED	BOOLEAN(1) NOT NULL,
+                         LOCKED BOOLEAN(1) NOT NULL,
+                         ACC_CRED_EXPIRED BOOLEAN(1) NOT NULL,
+                         PRIMARY KEY (ID)
 );
-
-create table authorities (
-                             username varchar(50) not null,
-                             authority varchar(50) not null,
-                             constraint fk_authorities_users foreign key(username) references users(username)
-);
-
-create unique index ix_auth_username on authorities (username,authority);

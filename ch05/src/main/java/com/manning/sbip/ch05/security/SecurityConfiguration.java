@@ -1,5 +1,6 @@
 package com.manning.sbip.ch05.security;
 
+import com.manning.sbip.ch05.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -92,14 +93,21 @@ public class SecurityConfiguration {
             return http.build();
         }
 
-        //스프링 시큐리티 기본 JDBC 인증 설정
-        @Autowired
-        public void configureGlobal(AuthenticationManagerBuilder auth)
-                throws Exception {
-                //스프링 시큐리티는 기본적으로 인증 요청이 발생하면 데이터 소스를 사용해 사용자 정보와 권한 정보를 읽어와 인증 요청 처리를한다.
-                auth.jdbcAuthentication()
-                        .dataSource(dataSource);
+        //커스텀한 유저 정보를 등록하기 위해 Bean 등록
+        @Bean
+        public UserDetailsService userDetailsService(){
+                return new CustomUserDetailsService();
         }
+
+        //위와 같이 설정할 시 스프링 시큐리티 기본적으로 사용하는 AuthenticationManagerBuilder를 이용하지 않아도된다.
+        //스프링 시큐리티 기본 JDBC 인증 설정
+//        @Autowired
+//        public void configureGlobal(AuthenticationManagerBuilder auth)
+//                throws Exception {
+//                //스프링 시큐리티는 기본적으로 인증 요청이 발생하면 데이터 소스를 사용해 사용자 정보와 권한 정보를 읽어와 인증 요청 처리를한다.
+//                auth.jdbcAuthentication()
+//                        .dataSource(dataSource);
+//        }
 
 
 
