@@ -92,7 +92,7 @@ public class SecurityConfiguration {
             return http.build();
         }
 
-        //DB 를 이용한 계정 맵핑
+        //스프링 시큐리티 기본 JDBC 인증 설정
         @Autowired
         public void configureGlobal(AuthenticationManagerBuilder auth)
                 throws Exception {
