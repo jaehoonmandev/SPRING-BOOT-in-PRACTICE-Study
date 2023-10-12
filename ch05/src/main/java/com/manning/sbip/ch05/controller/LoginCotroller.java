@@ -11,4 +11,9 @@ public class LoginCotroller {
     public String login(){
         return "login";
     }
+    //권한 외 기능을 실행할 떄 Override한 AccessDenied로 부터 /accessDenied redirect 전달
+    @GetMapping("/accessDenied")
+    public String accessDenied() {
+        return "accessDenied";
+    }
 }
