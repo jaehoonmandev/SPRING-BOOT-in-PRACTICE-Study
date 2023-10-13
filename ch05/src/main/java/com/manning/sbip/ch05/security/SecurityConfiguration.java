@@ -78,8 +78,8 @@ public class SecurityConfiguration {
 
 
         //DB 사용을 위한 인스턴스
-        @Autowired
-        private DataSource dataSource;
+//        @Autowired
+//        private DataSource dataSource;
 
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -94,10 +94,10 @@ public class SecurityConfiguration {
         }
 
         //커스텀한 유저 정보를 등록하기 위해 Bean 등록
-        @Bean
-        public UserDetailsService userDetailsService(){
-                return new CustomUserDetailsService();
-        }
+//        @Bean
+//        public UserDetailsService userDetailsService(){
+//                return new CustomUserDetailsService();
+//        }
 
         //위와 같이 설정할 시 스프링 시큐리티 기본적으로 사용하는 AuthenticationManagerBuilder를 이용하지 않아도된다.
         //스프링 시큐리티 기본 JDBC 인증 설정
@@ -111,14 +111,30 @@ public class SecurityConfiguration {
 
 
 
-
+        @Autowired
+        public void configure(AuthenticationManagerBuilder auth) throws Exception{  // AuthenticationManagerBuilder 를 이용한 인증
+                auth
+                        .ldapAuthentication() // LDAP 인증 체계 이용.
+                        //DN 정보를 설정, users.ldif 파일에 작성한 정보와 일치해야한다.
+                        //{0} 에 유저의 아이디, ou는 people 조직에 속한다는 것을 의미.
+                        .userDnPatterns("uid={0},ou=people")
+                        .contextSource()
+                        .url("ldap://localhost:8389/dc=manning,dc=com")// LDAP 서버 설정.
+                        .and()
+                        //비밀번호 확인 작업 등록.
+                        //LDAP인증에서는 사용자로부터 입력받은 비밀번호를 LDAP 서버에 제공, LDAP서버가 비밀번호 일치 여부를 확인.
+                        .passwordCompare()//
+                        .passwordEncoder(NoOpPasswordEncoder.getInstance())
+                        .passwordAttribute("userPassword")// 비밀번호로 사용하는 속성명 지정.
+                ;
+        }
 
         //비밀번호 암호화 메서드
 
-        @Bean
-        public PasswordEncoder passwordEncoder() {
-                return NoOpPasswordEncoder.getInstance();
-        }
+//        @Bean
+//        public PasswordEncoder passwordEncoder() {
+//                return NoOpPasswordEncoder.getInstance();
+//        }
 
 //        @Bean
 //        public PasswordEncoder passwordEncoder(){

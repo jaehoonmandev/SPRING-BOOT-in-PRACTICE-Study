@@ -7,15 +7,15 @@ create table courses (
                          PRIMARY KEY (id)
 );
 
-create table ct_users(
-                         ID	BIGINT(19)	NOT NULL,
-                         EMAIL	VARCHAR(255)	NOT NULL,
-                         FIRST_NAME	VARCHAR(255) NOT NULL,
-                         LAST_NAME	VARCHAR(255) NOT NULL,
-                         PASSWORD	VARCHAR(255) NOT NULL,
-                         USERNAME	VARCHAR(255) NOT NULL,
-                         VERIFIED	BOOLEAN(1) NOT NULL,
-                         LOCKED BOOLEAN(1) NOT NULL,
-                         ACC_CRED_EXPIRED BOOLEAN(1) NOT NULL,
-                         PRIMARY KEY (ID)
-);
+-- create table ct_users(
+--                          ID	BIGINT(19)	NOT NULL,
+--                          EMAIL	VARCHAR(255)	NOT NULL,
+--                          FIRST_NAME	VARCHAR(255) NOT NULL,
+--                          LAST_NAME	VARCHAR(255) NOT NULL,
+--                          PASSWORD	VARCHAR(255) NOT NULL,
+--                          USERNAME	VARCHAR(255) NOT NULL,
+--                          VERIFIED	BOOLEAN(1) NOT NULL,
+--                          LOCKED BOOLEAN(1) NOT NULL,
+--                          ACC_CRED_EXPIRED BOOLEAN(1) NOT NULL,
+--                          PRIMARY KEY (ID)
+-- );
