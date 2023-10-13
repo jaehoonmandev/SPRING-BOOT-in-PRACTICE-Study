@@ -1,6 +1,7 @@
 package com.manning.sbip.ch06.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -15,5 +16,12 @@ public class LoginCotroller {
     @GetMapping("/accessDenied")
     public String accessDenied() {
         return "accessDenied";
+    }
+
+    //로그인 실패 시
+    @GetMapping("/login-error")
+    public String loginError(Model model) {
+        model.addAttribute("loginError", true);
+        return "login";
     }
 }
