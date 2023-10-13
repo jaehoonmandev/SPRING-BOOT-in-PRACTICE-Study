@@ -14,6 +14,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch05" />
+        <module name="ch06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ch04" options="-parameters" />
       <module name="ch05" options="-parameters" />
+      <module name="ch06" options="-parameters" />
     </option>
   </component>
 </project>
