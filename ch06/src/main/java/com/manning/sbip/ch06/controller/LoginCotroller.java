@@ -39,4 +39,11 @@ public class LoginCotroller {
         return "login";
     }
 
+    //로그인 실패 횟수 초과 시
+    @GetMapping("/login-locked")
+    public String loginLocked(Model model) {
+        model.addAttribute("loginLocked", true);
+        return "login";
+    }
+
 }

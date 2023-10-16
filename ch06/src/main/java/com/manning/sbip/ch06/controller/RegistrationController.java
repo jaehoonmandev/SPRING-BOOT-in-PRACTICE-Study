@@ -46,10 +46,11 @@ public class RegistrationController {
             return "add-user";
         }
         //문제 없을 시 저장.
-        ApplicationUser applicationUser = userService.createUser(userDto);
+        userService.createUser(userDto);
 
         //이벤트 리스너를 퍼블리싱한다.
-        eventPublisher.publishEvent(new UserRegistrationEvent(applicationUser));
+        //ApplicationUser applicationUser = userService.createUser(userDto);
+        //eventPublisher.publishEvent(new UserRegistrationEvent(applicationUser));
         //저장 했던 정보들과 함께 전달.
         return "redirect:adduser?validate";
     }

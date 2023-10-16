@@ -20,5 +20,5 @@ public class ApplicationUser {
     private String username;
     private String email;
     private String password;
-    private boolean verified;
+    private boolean verified = true;
 }

@@ -53,6 +53,7 @@ public class SecurityConfiguration {
                             .requestMatchers(new AntPathRequestMatcher("/login-error")).permitAll()
                             .requestMatchers(new AntPathRequestMatcher("/login-verified")).permitAll()
                             .requestMatchers(new AntPathRequestMatcher("/verify/email")).permitAll()
+                            .requestMatchers(new AntPathRequestMatcher("/login-locked")).permitAll()
                             //.requestMatchers("/delete/**").hasRole("ADMIN") // 어드민 권한을 가진 계정만 delete 기능 사용 가능.
                             .anyRequest().authenticated()// 이외의 모든 요청은 인가 받은 유저만 접근 가능하고.
                     )
