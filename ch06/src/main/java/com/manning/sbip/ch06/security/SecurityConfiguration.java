@@ -34,17 +34,21 @@ public class SecurityConfiguration {
         // SecurityFilterChain를 return 하기 위해 HttpSecurity를 설정하여 build, return 해준다.
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http
-                 //                              ,HandlerMappingIntrospector introspector
+                                             //  ,HandlerMappingIntrospector introspector
         ) throws Exception {
                // MvcRequestMatcher.Builder mvcMatcherBuilder = new MvcRequestMatcher.Builder(introspector);
                 http
                     .requiresChannel((channel) -> channel.anyRequest().requiresSecure()) // 모든 요청에 HTTPS 를 강제한다.
-                    .authorizeHttpRequests( //인증 http 요청의 설정은
-                    (authz) -> authz.requestMatchers("/login","/adduser","/login-error",
-                                    "/webjars/**","/images/**","/css/**","/h2-console/**"
-                                    ).permitAll()
-                    .requestMatchers("/delete/**").hasRole("ADMIN") // 어드민 권한을 가진 계정만 delete 기능 사용 가능.
-                    .anyRequest().authenticated()) // 이외의 모든 요청은 인가 받은 유저만 접근 가능하고.
+                    //인증 http 요청 설정.
+                    //spring 3.x 대 이상부터는 H2 colsole enable = true 라면 Mvc 패턴과 Ant 패턴을 정확히 지정해주어야한다.
+                    .authorizeHttpRequests(
+                            (authz) -> authz
+                            .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
+                            .requestMatchers(new AntPathRequestMatcher("/adduser")).permitAll()
+                            .requestMatchers(new AntPathRequestMatcher("/login-error")).permitAll()
+                            //.requestMatchers("/delete/**").hasRole("ADMIN") // 어드민 권한을 가진 계정만 delete 기능 사용 가능.
+                            .anyRequest().authenticated()// 이외의 모든 요청은 인가 받은 유저만 접근 가능하고.
+                    )
                     .httpBasic(Customizer.withDefaults())
                     .formLogin(// 인증 방식은 formLogin으로 설정,
                             (login) -> login.loginPage("/login")//로그인 페이지는 /login으로.
@@ -60,15 +64,15 @@ public class SecurityConfiguration {
         }
 
         // web security 설정
-//        @Bean
-//        public WebSecurityCustomizer webSecurityCustomizer() {
-//                //정적인 요소들은 항상 접근할 수 있도록 Matchers 를 설정해준다.
-//        return (web) -> web.ignoring()
-//                .requestMatchers(new AntPathRequestMatcher("/h2-console/**"))
-//                .requestMatchers(new AntPathRequestMatcher("/webjars/**"))
-//                .requestMatchers(new AntPathRequestMatcher("/images/**"))
-//                .requestMatchers(new AntPathRequestMatcher("/css/**"));
-//
-//
-//        }
+        @Bean
+        public WebSecurityCustomizer webSecurityCustomizer() {
+                //정적인 요소들은 항상 접근할 수 있도록 Matchers 를 설정해준다.
+        return (web) -> web.ignoring()
+                .requestMatchers(new AntPathRequestMatcher("/h2-console/*"))
+                .requestMatchers(new AntPathRequestMatcher("/webjars/**"))
+                .requestMatchers(new AntPathRequestMatcher("/images/**"))
+                .requestMatchers(new AntPathRequestMatcher("/css/**"));
+
+
+        }
 }
