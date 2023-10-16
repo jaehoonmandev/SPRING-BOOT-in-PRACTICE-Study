@@ -27,11 +27,6 @@
 					<a class="nav-link" href="#" th:href="@{/addcourse}">Add Course</a>
 				</li>
 			</ul>
-			<!--ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#" th:href="@{/adduser}">Register</a>
-				</li>
-			</ul-->
 		</div>
 	</nav>
 	<div class="container my-5">
@@ -48,8 +43,6 @@
 				<div th:if="${loginError}" class="alert alert-danger">Wrong Username or Password</div>
 				<div th:if="${loginVerified}" class="alert alert-success">Account has been verified. Please sign-in</div>
 				<div th:if="${loginDisabled}" class="alert alert-danger">Account is not yet active. Please check your email</div>
-				<div th:if="${loginLocked}" class="alert alert-danger">Account locked due to multiple incorrect login attempts.</div>
-				
 				<form th:action="@{/login}" method="post">
 					<div class="form-group">
 						<label for="username">Username</label>
@@ -59,7 +52,11 @@
 						<label for="password">Password</label>
 						<input type="password" class="form-control" name="password" placeholder="Enter Password" required autofocus>
 					</div>
-					<div class="text-center">
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" name="remember-me">
+						<label for="remember-me" class="form-check-label">Remember me</label>
+					</div>
+					<div class="text-center mt-1">
 						<button type="submit" class="btn btn-dark">Submit</button>
 						<a class="btn btn-success" href="#" th:href="@{/adduser}">Register</a>
 					</div>

@@ -1,6 +1,7 @@
 package com.manning.sbip.ch06.service.impl;
 
 import com.manning.sbip.ch06.model.ApplicationUser;
+import com.manning.sbip.ch06.repository.UserRepository;
 import com.manning.sbip.ch06.service.LoginAttemptService;
 import com.manning.sbip.ch06.service.UserService;
 
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Service;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
 	@Autowired
 	private LoginAttemptService loginAttemptService;
@@ -30,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			throw new LockedException("User Account is Locked");
 		}
 
-		ApplicationUser applicationUser = userService.findByUsername(username);
+		ApplicationUser applicationUser = userRepository.findByUsername(username);
 		if(applicationUser == null) {
 			throw new UsernameNotFoundException("User with username "+username+" does not exists");
 		}
