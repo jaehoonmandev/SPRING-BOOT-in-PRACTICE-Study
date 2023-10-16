@@ -1,7 +1,7 @@
-package com.manning.sbip.ch06.service.impl;
+package com.manning.sbip.ch06.service;
 
 import com.manning.sbip.ch06.dto.UserDto;
-import com.manning.sbip.ch06.model.ApplicationUser;
+import com.manning.sbip.ch06.model.User;
 import com.manning.sbip.ch06.repository.UserRepository;
 import com.manning.sbip.ch06.service.UserService;
 
@@ -21,23 +21,23 @@ public class DefaultUserService implements UserService {
     private PasswordEncoder passwordEncoder;
 
     //사용자 정보 입력 후 UserDto로 맵핑된 정보를 하나씩 model로 지정하여 Repository로 넘겨주며 최종적으로 DB에 저장하게 된다.
-    public ApplicationUser createUser(UserDto userDto) {
-       ApplicationUser applicationUser = new ApplicationUser();
-       applicationUser.setFirstName(userDto.getFirstName());
-       applicationUser.setLastName(userDto.getLastName());
-       applicationUser.setEmail(userDto.getEmail());
-       applicationUser.setUsername(userDto.getUsername());
-       applicationUser.setPassword(passwordEncoder.encode(userDto.getPassword()));
+    public User createUser(UserDto userDto) {
+       User User = new User();
+       User.setFirstName(userDto.getFirstName());
+       User.setLastName(userDto.getLastName());
+       User.setEmail(userDto.getEmail());
+       User.setUsername(userDto.getUsername());
+       User.setPassword(passwordEncoder.encode(userDto.getPassword()));
 
-       return userRepository.save(applicationUser);
+       return userRepository.save(User);
     }
 
     @Override
-    public ApplicationUser save(ApplicationUser applicationUser) {
-        return userRepository.save(applicationUser);
+    public User save(User User) {
+        return userRepository.save(User);
     }
 
-    public ApplicationUser findByUsername(String username) {
+    public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 }

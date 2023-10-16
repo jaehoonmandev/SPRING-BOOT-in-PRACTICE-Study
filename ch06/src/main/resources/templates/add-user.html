@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Regsiter User</title>
+    <title>Add User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}" />
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/webjars/bootstrap/4.1.0/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
     <script src="http://cdn.jsdelivr.net/webjars/bootstrap/4.1.0/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     <script src="http://cdn.jsdelivr.net/webjars/jquery/3.3.1/jquery.min.js" th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
@@ -24,14 +25,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" th:href="@{/index}">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" th:href="@{/addcourse}">Add Course</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" th:href="@{/addcourse}">Add Course <span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="container my-5">
-	
+
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 bg-dark text-light text-center border rounded-top border-bottom-0 border-dark p-1">
@@ -42,15 +43,15 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 border rounded-bottom border-dark p-3">
-            <form action="#" th:action="@{/adduser}" th:object="${user}" method="POST" >
+            <form action="#" th:action="@{/adduser}" th:object="${myUser}" method="POST" >
                 <div th:if="${param.success}" >
                     <div class="alert alert-success">
-                        Registration completed. You can now <a href="/login" th:href="@{/login}">login</a>
+                        Registration completed. You can now <a href="/login" th:href="@{/login}">login</a>.
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputFirstname">Firstname</label>
-                    <input type="text" th:field="*{firstName}" class="form-control" id="inputFirstname" placeholder="Enter First Name" autofocus>
+                    <input type="text" th:field="*{firstName}" class="form-control" id="inputFirstname" placeholder="Enter First Name">
                     <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -72,11 +73,6 @@
                     <label for="inputPassword">Password</label>
                     <input type="password" th:field="*{password}" class="form-control" id="inputPassword" placeholder="Password">
                     <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" th:field="*{confirmPassword}" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                    <span th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="text-danger"></span>
                 </div>
                 <div class="form-group text-center">
                     <input type="submit" class="btn btn-dark center" value="Sign Up" />

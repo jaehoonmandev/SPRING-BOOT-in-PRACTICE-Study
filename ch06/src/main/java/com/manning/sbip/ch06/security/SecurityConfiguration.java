@@ -1,23 +1,22 @@
 package com.manning.sbip.ch06.security;
 
+import com.manning.sbip.ch06.filter.TotpAuthFilter;
 import com.manning.sbip.ch06.handler.CustomAuthenticationFailureHandler;
-import com.manning.sbip.ch06.service.impl.CustomUserDetailsService;
+import com.manning.sbip.ch06.service.CustomUserDetailsService;
+import com.manning.sbip.ch06.service.DefaultAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
-import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 @Configuration
 @EnableWebSecurity // 커스텀 보안 설정 인식
@@ -40,6 +39,9 @@ public class SecurityConfiguration {
         @Autowired
         private CustomUserDetailsService customUserDetailsService;
 
+        @Autowired
+        private TotpAuthFilter totpAuthFilter;
+
         // http security 설정
         // SecurityFilterChain를 return 하기 위해 HttpSecurity를 설정하여 build, return 해준다.
         @Bean
@@ -47,6 +49,11 @@ public class SecurityConfiguration {
                                              //  ,HandlerMappingIntrospector introspector
         ) throws Exception {
                // MvcRequestMatcher.Builder mvcMatcherBuilder = new MvcRequestMatcher.Builder(introspector);
+
+                // UsernamePasswordAuthenticationFilter 보다 앞에서 실행될 수 있게.
+                // totpAuthFilter가 먼저 실행될 수 있게 설정한다.
+                http.addFilterBefore(totpAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
                http
                        .requiresChannel((channel) -> channel.anyRequest().requiresSecure()) // 모든 요청에 HTTPS 를 강제한다.
                         //인증 http 요청 설정.
@@ -60,18 +67,22 @@ public class SecurityConfiguration {
                                         .requestMatchers(new AntPathRequestMatcher("/login-verified")).permitAll()
                                         .requestMatchers(new AntPathRequestMatcher("/verify/email")).permitAll()
                                         .requestMatchers(new AntPathRequestMatcher("/login-locked")).permitAll()
+                                        .requestMatchers(new AntPathRequestMatcher("/totp-login")).hasAuthority("TOTP_AUTH_AUTHORITY")
+                                        .requestMatchers(new AntPathRequestMatcher("/totp-login-error")).hasAuthority("TOTP_AUTH_AUTHORITY")
                                         //.requestMatchers("/delete/**").hasRole("ADMIN") // 어드민 권한을 가진 계정만 delete 기능 사용 가능.
                                 .anyRequest().authenticated()// 이외의 모든 요청은 인가 받은 유저만 접근 가능하고.
                                 )
                     .httpBasic(Customizer.withDefaults())
-                    .formLogin(// 인증 방식은 formLogin으로 설정,
-                            (login) -> login.loginPage("/login")//로그인 페이지는 /login으로.
-                            //.failureUrl("/login-error") // 실패시에는 설정한 값으로 리다이렉트
-                            .failureHandler(customAuthenticationFailureHandler))// 인증 실패 핸들러 설정.
-                       //리멤버미 기능 확설화 및 키와 쿠키 이름을 지정
-                       .rememberMe(remem -> remem.key("remember-me-key").rememberMeCookieName("course-tracker-remember-me"))
-                       //로그아웃 시 쿠키가 지워지게 설정.
-                       .logout(logout -> logout.deleteCookies("course-tracker-remember-me"))
+                       .formLogin((login) -> login.loginPage("/login")
+                        .successHandler(new DefaultAuthenticationSuccessHandler()).failureUrl("/login-error"))
+//                    .formLogin(// 인증 방식은 formLogin으로 설정,
+//                            (login) -> login.loginPage("/login")//로그인 페이지는 /login으로.
+//                            //.failureUrl("/login-error") // 실패시에는 설정한 값으로 리다이렉트
+//                            .failureHandler(customAuthenticationFailureHandler))// 인증 실패 핸들러 설정.
+//                       //리멤버미 기능 확설화 및 키와 쿠키 이름을 지정
+//                       .rememberMe(remem -> remem.key("remember-me-key").rememberMeCookieName("course-tracker-remember-me"))
+//                       //로그아웃 시 쿠키가 지워지게 설정.
+//                       .logout(logout -> logout.deleteCookies("course-tracker-remember-me"))
                ;
             return http.build();
         }

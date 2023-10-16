@@ -14,7 +14,8 @@ create table CT_USERS(
     email varchar(50),
     username varchar(50),
     password varchar(100),
-    verified SMALLINT,
+    totp_enabled SMALLINT,
+    --verified SMALLINT,
     PRIMARY KEY (id)
 );
 
@@ -23,3 +24,10 @@ create table CT_EMAIL_VERIFICATIONS(
    username varchar(50),
    PRIMARY KEY (verification_id)
 );
+
+create table CT_TOTP_DETAILS (
+     id BIGINT NOT NULL auto_increment,
+     secret	varchar(255),
+     username	varchar(255),
+     PRIMARY KEY (id)
+)

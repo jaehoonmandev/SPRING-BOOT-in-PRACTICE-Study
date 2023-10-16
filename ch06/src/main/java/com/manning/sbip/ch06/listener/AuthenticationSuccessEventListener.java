@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 import com.manning.sbip.ch06.service.LoginAttemptService;
 
 // 스프링 시큐리티 로그인 성공 시 호출되는 AuthenticationSuccessEvent 의 이벤트 리스너
-@Component
+//@Component
 public class AuthenticationSuccessEventListener implements ApplicationListener<AuthenticationSuccessEvent> {
 	
-    @Autowired
+    //@Autowired
     private LoginAttemptService loginAttemptService;
 
     //이벤트 성공 시 해당 유저의 실패 횟수를 무효화한다.
