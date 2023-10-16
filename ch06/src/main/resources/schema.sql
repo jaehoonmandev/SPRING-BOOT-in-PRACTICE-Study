@@ -14,5 +14,12 @@ create table CT_USERS(
     email varchar(50),
     username varchar(50),
     password varchar(100),
+    verified SMALLINT,
     PRIMARY KEY (id)
+);
+
+create table CT_EMAIL_VERIFICATIONS(
+   verification_id varchar(50),
+   username varchar(50),
+   PRIMARY KEY (verification_id)
 );

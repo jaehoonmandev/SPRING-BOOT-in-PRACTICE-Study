@@ -24,4 +24,19 @@ public class LoginCotroller {
         model.addAttribute("loginError", true);
         return "login";
     }
+
+    //인증된
+    @GetMapping("/login-verified")
+    public String loginVerified(Model model) {
+        model.addAttribute("loginVerified", true);
+        return "login";
+    }
+
+    //인증이 되지 않은.
+    @GetMapping("/login-disabled")
+    public String loginDisabled(Model model) {
+        model.addAttribute("loginDisabled", true);
+        return "login";
+    }
+
 }

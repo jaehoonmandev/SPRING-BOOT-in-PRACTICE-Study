@@ -5,5 +5,6 @@ import com.manning.sbip.ch06.model.ApplicationUser;
 
 public interface UserService {
     ApplicationUser createUser(UserDto userDto); // 유저 생성
+    ApplicationUser save(ApplicationUser applicationUser);// 저장
     ApplicationUser findByUsername(String username); // username 기준 조회
 }

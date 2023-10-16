@@ -1,9 +1,12 @@
 package com.manning.sbip.ch06.controller;
 
 import com.manning.sbip.ch06.dto.UserDto;
+import com.manning.sbip.ch06.event.UserRegistrationEvent;
+import com.manning.sbip.ch06.model.ApplicationUser;
 import com.manning.sbip.ch06.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,6 +22,10 @@ public class RegistrationController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ApplicationEventPublisher eventPublisher;
+
     //단순 호출 시에는 사용자 등록 페이지를 리턴해준다.
     @GetMapping("/adduser")
     public String register(Model model) {
@@ -39,8 +46,11 @@ public class RegistrationController {
             return "add-user";
         }
         //문제 없을 시 저장.
-        userService.createUser(userDto);
+        ApplicationUser applicationUser = userService.createUser(userDto);
+
+        //이벤트 리스너를 퍼블리싱한다.
+        eventPublisher.publishEvent(new UserRegistrationEvent(applicationUser));
         //저장 했던 정보들과 함께 전달.
-        return "redirect:adduser?success";
+        return "redirect:adduser?validate";
     }
 }
