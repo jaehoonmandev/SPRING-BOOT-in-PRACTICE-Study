@@ -10,18 +10,18 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 
+
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "COURSES")
+@Table(name = "MODERN_COURSES")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Course {
+public class ModernCourse {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,4 +44,9 @@ public class Course {
 	@NotEmpty
 	@Column(name = "DESCRIPTION")
 	private String description;
+
+	//가격 정보 추가.
+	@NotNull
+	@Column(name = "PRICE")
+	private double price;
 }

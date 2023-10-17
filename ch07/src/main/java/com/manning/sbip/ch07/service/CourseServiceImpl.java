@@ -9,13 +9,11 @@ import com.manning.sbip.ch07.exception.CourseNotFoundException;
 import com.manning.sbip.ch07.model.Course;
 import com.manning.sbip.ch07.repository.CourseRepository;
 
-
-//Course 관련 DB 연산 수행.
 @Service
 public class CourseServiceImpl implements CourseService {
-
+	
 	private CourseRepository courseRepository;
-
+	
 	@Autowired
 	public CourseServiceImpl(CourseRepository courseRepository) {
 		this.courseRepository = courseRepository;
@@ -28,7 +26,11 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public Optional<Course> getCourseById(long courseId) {
-		return courseRepository.findById(courseId);
+		Optional<Course> optionalCourse = courseRepository.findById(courseId);
+		if(optionalCourse.isEmpty()) {
+			throw new CourseNotFoundException(String.format("No course with id %s is available", courseId));
+		}
+		return optionalCourse;
 	}
 
 	@Override
@@ -43,14 +45,18 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public Course updateCourse(long courseId, Course course) {
-		Course existingCourse = courseRepository.findById(courseId)
-				// 존재하지 않는 과정을 갱신 시 예외 처리
-				.orElseThrow(() -> new CourseNotFoundException(String.format("No course with id %s is available", courseId)));
-		existingCourse.setName(course.getName());
-		existingCourse.setCategory(course.getCategory());
-		existingCourse.setDescription(course.getDescription());
-		existingCourse.setRating(course.getRating());
-		return courseRepository.save(existingCourse);
+		
+		Optional<Course> optionalCourse = courseRepository.findById(courseId);
+		if(optionalCourse.isPresent()) {
+			Course dbCourse = optionalCourse.get();
+			dbCourse.setName(course.getName());
+			dbCourse.setCategory(course.getCategory());
+			dbCourse.setDescription(course.getDescription());
+			dbCourse.setRating(course.getRating());
+			
+			return courseRepository.save(dbCourse);
+		}
+		throw new CourseNotFoundException(String.format("No course with id %s is available", courseId));
 	}
 
 	@Override
@@ -60,9 +66,11 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public void deleteCourseById(long courseId) {
-		courseRepository.findById(courseId)
-				.orElseThrow(() -> new CourseNotFoundException("No course with id %s is available" + courseId));
-		courseRepository.deleteById(courseId);
+		Optional<Course> optionalCourse = courseRepository.findById(courseId);
+		if(optionalCourse.isPresent()) {
+			courseRepository.deleteById(courseId);
+		}
+		throw new CourseNotFoundException(String.format("No course with id %s is available", courseId));
 	}
 
 }
