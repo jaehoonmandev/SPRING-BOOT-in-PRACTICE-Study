@@ -1,4 +1,4 @@
-package com.manning.sbip.ch06.service;
+package com.manning.sbip.ch06.service.impl;
 
 import com.manning.sbip.ch06.dto.UserDto;
 import com.manning.sbip.ch06.model.User;

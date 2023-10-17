@@ -2,8 +2,9 @@ package com.manning.sbip.ch06.security;
 
 import com.manning.sbip.ch06.filter.TotpAuthFilter;
 import com.manning.sbip.ch06.handler.CustomAuthenticationFailureHandler;
-import com.manning.sbip.ch06.service.CustomUserDetailsService;
-import com.manning.sbip.ch06.service.DefaultAuthenticationSuccessHandler;
+import com.manning.sbip.ch06.service.impl.CustomUserDetailsService;
+import com.manning.sbip.ch06.service.impl.DefaultAuthenticationSuccessHandler;
+import com.manning.sbip.ch06.service.impl.Oauth2AuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -75,6 +76,7 @@ public class SecurityConfiguration {
                     .httpBasic(Customizer.withDefaults())
                        .formLogin((login) -> login.loginPage("/login")
                         .successHandler(new DefaultAuthenticationSuccessHandler()).failureUrl("/login-error"))
+                       .oauth2Login(oauth2 -> oauth2.loginPage("/login").successHandler(new Oauth2AuthenticationSuccessHandler()))
 //                    .formLogin(// 인증 방식은 formLogin으로 설정,
 //                            (login) -> login.loginPage("/login")//로그인 페이지는 /login으로.
 //                            //.failureUrl("/login-error") // 실패시에는 설정한 값으로 리다이렉트

@@ -1,4 +1,4 @@
-package com.manning.sbip.ch06.service;
+package com.manning.sbip.ch06.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

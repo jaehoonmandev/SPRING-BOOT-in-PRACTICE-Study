@@ -1,4 +1,4 @@
-package com.manning.sbip.ch06.service;
+package com.manning.sbip.ch06.service.impl;
 
 import com.manning.sbip.ch06.model.Course;
 import com.manning.sbip.ch06.repository.CourseRepository;

@@ -1,4 +1,4 @@
-package com.manning.sbip.ch06.service;
+package com.manning.sbip.ch06.service.impl;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
