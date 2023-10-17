@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="학습기록 - JPA PagingAndSorting">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/Repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootinpracticestudy/SpringBootInPracticeStudyApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/Ch07Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/Ch07Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -26,11 +34,17 @@
     <projectState path="$PROJECT_DIR$/ch04">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/ch05">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/ch04">
           <activation />
         </task>
         <projects_view>
@@ -47,8 +61,9 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -75,6 +90,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -82,37 +98,48 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "android.gradle.sync.needed": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/src/main/java",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch07/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.5555556",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/ch07/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch07/src/main/java/com/manning/ch07" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/java/com/manning/sbip/ch06/service" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/springbootinpracticestudy/NotRungStored" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/resources/keystore" />
+      <recent name="$PROJECT_DIR$/ch06" />
+      <recent name="$PROJECT_DIR$/ch04/src/main/resources/static/images" />
+      <recent name="$PROJECT_DIR$/ch04/src/main/resources/static" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.manning.sbip.ch07" />
       <recent name="com.example.springbootinpracticestudy" />
       <recent name="com.example.springbootinpracticestudy.Main" />
     </key>
@@ -120,121 +147,115 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
-        <option value="JUnit" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses">
-    <configuration name="SpringBootInPracticeStudyApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
+  <component name="RunManager" selected="Spring Boot.Ch07Application (1)">
+    <configuration name="Ch07ApplicationTest.testPostCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch07" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
+          <option name="PATTERN" value="com.manning.sbip.ch07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
-      <option name="METHOD_NAME" value="givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
+      <option name="PACKAGE_NAME" value="com.manning.sbip.ch07" />
+      <option name="MAIN_CLASS_NAME" value="com.manning.sbip.ch07.Ch07ApplicationTest" />
+      <option name="METHOD_NAME" value="testPostCourse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
+    <configuration name="Ch07ApplicationTest.testRetrieveCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch07" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
+          <option name="PATTERN" value="com.manning.sbip.ch07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
-      <option name="METHOD_NAME" value="givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
+      <option name="PACKAGE_NAME" value="com.manning.sbip.ch07" />
+      <option name="MAIN_CLASS_NAME" value="com.manning.sbip.ch07.Ch07ApplicationTest" />
+      <option name="METHOD_NAME" value="testRetrieveCourse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
-      <option name="METHOD_NAME" value="givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SPRING-BOOT-in-PRACTICE-Study.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.springbootinpracticestudy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.springbootinpracticestudy" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springbootinpracticestudy.SpringBootInPracticeStudyApplicationTest" />
-      <option name="METHOD_NAME" value="givenDataAvailableWhenSortsFirstPageThenGetSortedSData" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ch04Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="Ch04Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="ch04.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ch04.Ch04Application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sbip.ch04.Ch04Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sbip.ch04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="boot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="SPRING-BOOT-in-PRACTICE-Study" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbootinpracticestudy.CourseTrackerSpringBootApplication" />
+    <configuration name="Ch05Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ch05.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sbip.ch05.Ch05Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ch06Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ch06" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch06.Ch06Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.manning.sbip.ch06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ch07Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ch07" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch07.Ch07Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.manning.sbip.ch07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseTrackerSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ch05" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch05.CourseTrackerSpringBootApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
-      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" />
-      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData" />
-      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
-      <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
-      <item itemvalue="Spring Boot.boot" />
-      <item itemvalue="Spring Boot.Ch04Application" />
+      <item itemvalue="JUnit.Ch07ApplicationTest.testPostCourse" />
+      <item itemvalue="JUnit.Ch07ApplicationTest.testRetrieveCourse" />
+      <item itemvalue="Spring Boot.Ch05Application" />
+      <item itemvalue="Spring Boot.CourseTrackerSpringBootApplication" />
+      <item itemvalue="Spring Boot.Ch04Application (1)" />
+      <item itemvalue="Spring Boot.Ch06Application" />
+      <item itemvalue="Spring Boot.Ch07Application (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCoursesCreatedWhenLoadCoursesBySpringCategoryThenExpectThreeCourses" />
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest" />
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenSortsFirstPageThenGetSortedSData" />
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenDataAvailableWhenLoadFirstPageThenGetFiveRecords" />
-        <item itemvalue="JUnit.SpringBootInPracticeStudyApplicationTest.givenCreateCourseWhenLoadTheCourseThenExpectSameCourse" />
+        <item itemvalue="Spring Boot.Ch07Application (1)" />
+        <item itemvalue="JUnit.Ch07ApplicationTest.testRetrieveCourse" />
+        <item itemvalue="JUnit.Ch07ApplicationTest.testPostCourse" />
+        <item itemvalue="Spring Boot.Ch06Application" />
+        <item itemvalue="Spring Boot.Ch04Application (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +273,10 @@
       <workItem from="1695730883556" duration="659000" />
       <workItem from="1695731549089" duration="10319000" />
       <workItem from="1695992754358" duration="5728000" />
-      <workItem from="1695999138184" duration="4125000" />
+      <workItem from="1695999138184" duration="7495000" />
+      <workItem from="1696050522357" duration="84920000" />
+      <workItem from="1697508761848" duration="2661000" />
+      <workItem from="1697511441850" duration="1527000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -294,16 +318,236 @@
       <option name="project" value="LOCAL" />
       <updated>1696000289794</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="학습기록 - JPA NamedQuery">
+      <option name="closed" value="true" />
+      <created>1696003865281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696003865281</updated>
+    </task>
+    <task id="LOCAL-00007" summary="학습기록 - JPA Query">
+      <option name="closed" value="true" />
+      <created>1696048596286</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696048596286</updated>
+    </task>
+    <task id="LOCAL-00008" summary="학습기록 - Creteria API 사용">
+      <option name="closed" value="true" />
+      <created>1696049973638</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696049973638</updated>
+    </task>
+    <task id="LOCAL-00009" summary="학습기록 - 테이블 관계 설정">
+      <option name="closed" value="true" />
+      <created>1696053426165</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696053426165</updated>
+    </task>
+    <task id="LOCAL-00010" summary="학습기록 - 커스텀 실패 분석기">
+      <option name="closed" value="true" />
+      <created>1696493077310</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696493077310</updated>
+    </task>
+    <task id="LOCAL-00011" summary="학습기록 - 스프링 커스텀 액추에이터">
+      <option name="closed" value="true" />
+      <created>1696496221885</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696496221885</updated>
+    </task>
+    <task id="LOCAL-00012" summary="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]">
+      <option name="closed" value="true" />
+      <created>1696498441460</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696498441460</updated>
+    </task>
+    <task id="LOCAL-00013" summary="학습기록 - 스프링 액추에이터 메트릭스 커스텀">
+      <option name="closed" value="true" />
+      <created>1696510192782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696510192782</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ch05 학습기록 - 스프링 시큐리티 적용, 로그인 페이지 맵핑">
+      <option name="closed" value="true" />
+      <created>1697026919602</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697026919602</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ch05 학습기록 - 스프링 시큐리티 웹 서큐리티 커스터마이징">
+      <option name="closed" value="true" />
+      <created>1697083285917</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697083285917</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ch05 학습기록 - 스프링 시큐리티 스프링 기본 DB 연동 JDBC 인증">
+      <option name="closed" value="true" />
+      <created>1697086478174</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697086478174</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ch05 학습기록 - 스프링 시큐리티 스프링 기본 DB 연동 JDBC 인증">
+      <option name="closed" value="true" />
+      <created>1697086533157</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697086533157</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ch05 학습기록 - 스프링 시큐리티 기본 사용자 테이블명이 아닌 테이블에서 유저 인증하기.">
+      <option name="closed" value="true" />
+      <created>1697088226959</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697088226959</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ch05 학습기록 - 스프링 시큐리티 [LDAP 인증 설정]">
+      <option name="closed" value="true" />
+      <created>1697181175235</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697181175235</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ch06 학습기록 - 스프링 내장 톰켓을 https로 리다이렉트.">
+      <option name="closed" value="true" />
+      <created>1697198328705</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697198328705</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ch06 학습기록 - 스프링 시큐리티 응용 [사용자 등록]">
+      <option name="closed" value="true" />
+      <created>1697203765772</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697203765772</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ch06 학습기록 - 스프링 시큐리티 응용 [사용자 등록]">
+      <option name="closed" value="true" />
+      <created>1697203782387</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697203782387</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ch06 학습기록 - 스프링 시큐리티 응용 [사용자 등록] &#10;&gt; spring.h2.console.enabled=true 시 서블릿 오류 수정.">
+      <option name="closed" value="true" />
+      <created>1697419472637</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697419472637</updated>
+    </task>
+    <task id="LOCAL-00024" summary="ch06 학습기록 - 이메일 인증 &#10;&gt; 리스너/퍼블리셔 등록&#10;&gt; 인증 엔드포인트 지정, username로 매핑된 테이블과 Base64로 인코딩한 UUID가 같다면 인증 완료 로직.">
+      <option name="closed" value="true" />
+      <created>1697435702354</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697435702354</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ch06 학습기록 - 로그인 실패 횟수 차단&#10;&gt; 구아바 캐시 사용&#10;&gt; AuthenticationFailureBadCredentialsEvent 로 실패 핸들링&#10;&gt; AuthenticationFailureBadCredentialsEvent 로 성공 핸들링">
+      <option name="closed" value="true" />
+      <created>1697438964140</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697438964140</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ch06 학습기록 - 리멤버미">
+      <option name="closed" value="true" />
+      <created>1697440680504</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1697440680504</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ch06 학습기록 - 구글 어센티케이터 OTP 인증">
+      <option name="closed" value="true" />
+      <created>1697453297817</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697453297817</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리">
+      <option name="closed" value="true" />
+      <created>1697510038847</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697510038847</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. 학습기록" />
     <MESSAGE value="학습기록" />
     <MESSAGE value="학습기록 - JPA PagingAndSorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="학습기록 - JPA PagingAndSorting" />
+    <MESSAGE value="학습기록 - JPA NamedQuery" />
+    <MESSAGE value="학습기록 - JPA Query" />
+    <MESSAGE value="학습기록 - Creteria API 사용" />
+    <MESSAGE value="학습기록 - 테이블 관계 설정" />
+    <MESSAGE value="학습기록 - 커스텀 실패 분석기" />
+    <MESSAGE value="학습기록 - 스프링 커스텀 액추에이터" />
+    <MESSAGE value="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]" />
+    <MESSAGE value="학습기록 - 스프링 액추에이터 메트릭스 커스텀" />
+    <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 적용, 로그인 페이지 맵핑" />
+    <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 웹 서큐리티 커스터마이징" />
+    <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 스프링 기본 DB 연동 JDBC 인증" />
+    <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 기본 사용자 테이블명이 아닌 테이블에서 유저 인증하기." />
+    <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 [LDAP 인증 설정]" />
+    <MESSAGE value="ch06 학습기록 - 스프링 내장 톰켓을 https로 리다이렉트." />
+    <MESSAGE value="ch06 학습기록 - 스프링 시큐리티 응용 [사용자 등록]" />
+    <MESSAGE value="ch06 학습기록 - 스프링 시큐리티 응용 [사용자 등록] &#10;&gt; spring.h2.console.enabled=true 시 서블릿 오류 수정." />
+    <MESSAGE value="ch06 학습기록 - 이메일 인증 &#10;&gt; 리스너/퍼블리셔 등록&#10;&gt; 인증 엔드포인트 지정, username로 매핑된 테이블과 Base64로 인코딩한 UUID가 같다면 인증 완료 로직." />
+    <MESSAGE value="ch06 학습기록 - 로그인 실패 횟수 차단&#10;&gt; 구아바 캐시 사용&#10;&gt; AuthenticationFailureBadCredentialsEvent 로 실패 핸들링&#10;&gt; AuthenticationFailureBadCredentialsEvent 로 성공 핸들링" />
+    <MESSAGE value="ch06 학습기록 - 리멤버미" />
+    <MESSAGE value="ch06 학습기록 - 구글 어센티케이터 OTP 인증" />
+    <MESSAGE value="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

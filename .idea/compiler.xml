@@ -15,6 +15,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch05" />
         <module name="ch06" />
+        <module name="ch07" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
@@ -24,6 +25,7 @@
       <module name="ch04" options="-parameters" />
       <module name="ch05" options="-parameters" />
       <module name="ch06" options="-parameters" />
+      <module name="ch07" options="-parameters" />
     </option>
   </component>
 </project>
