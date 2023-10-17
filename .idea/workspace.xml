@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch07 학습기록 - RESTful API 버저닝 [URI 버저닝]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/Ch07Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/Ch07Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +92,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch07/src/main/resources",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch07/src/main/java/com/manning/sbip/ch07/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,11 +112,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07/controller" />
+      <recent name="$PROJECT_DIR$/ch07/src/main/java/com/manning/sbip/ch07" />
       <recent name="$PROJECT_DIR$/ch07/src/main/resources" />
       <recent name="$PROJECT_DIR$/ch07/src/main/java/com/manning/ch07" />
       <recent name="$PROJECT_DIR$/ch06/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/ch06/src/main/java/com/manning/sbip/ch06/service" />
-      <recent name="$PROJECT_DIR$/ch06/src/main/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -276,7 +266,7 @@
       <workItem from="1695999138184" duration="7495000" />
       <workItem from="1696050522357" duration="84920000" />
       <workItem from="1697508761848" duration="2661000" />
-      <workItem from="1697511441850" duration="1527000" />
+      <workItem from="1697511441850" duration="3496000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -502,7 +492,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697510038847</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ch07 학습기록 - API 문서화&#10;&gt; Open API 문서화 기능 이용">
+      <option name="closed" value="true" />
+      <created>1697517347081</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697517347081</updated>
+    </task>
+    <task id="LOCAL-00030" summary="ch07 학습기록 - RESTful API 버저닝 [URI 버저닝]">
+      <option name="closed" value="true" />
+      <created>1697518824202</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697518824202</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. 학습기록" />
     <MESSAGE value="학습기록" />
     <MESSAGE value="학습기록 - JPA PagingAndSorting" />
     <MESSAGE value="학습기록 - JPA NamedQuery" />
@@ -544,7 +549,9 @@
     <MESSAGE value="ch06 학습기록 - 리멤버미" />
     <MESSAGE value="ch06 학습기록 - 구글 어센티케이터 OTP 인증" />
     <MESSAGE value="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch07 학습기록 - RESTful API&#10;&gt; 엔드포인트 지정&#10;&gt; API 오류 예외처리" />
+    <MESSAGE value="ch07 학습기록 - API 문서화&#10;&gt; Open API 문서화 기능 이용" />
+    <MESSAGE value="ch07 학습기록 - RESTful API 버저닝 [URI 버저닝]" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch07 학습기록 - RESTful API 버저닝 [URI 버저닝]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
