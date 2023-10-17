@@ -40,18 +40,12 @@ public class CourseController {
 	@GetMapping
 	@PreAuthorize("hasAuthority('SCOPE_course:read')")
 	public Iterable<Course> getAllCourses(@AuthenticationPrincipal Jwt jwt) { //@AuthenticationPrincipal 을 통해서 JWT 토큰에 저장된 값에 정근.
-		//JWT 인증에는 Bearer 토큰이 필요한데 스프링 시큐리티의 BearerTokenAuthenticationFilter를 사용해서 요청을 분석,
-		//JWT 토큰 세부 내용을 담고 있는 JwtAuthenticationToken을 생성한다.
 		String author = jwt.getClaim("user_name"); //키클록 인가 서버에서 설정한 커스텀 클레임(claim)으로 JWT로부터 강사 이름을 획득하는데 사용.
 		return courseRepository.findByAuthor(author);
 	}
 
 	@GetMapping("{id}")
-	//누구의 토큰인지 구분하기 위해 Spring expression language(SpEL)을 사용하여 추가적인 접근 제어를한다.
-	//해당 스코프 권한을 가진 클라이언트만.
-	// 스프링 시큐리티는 스코프 앞에 접두어 SCOPE_를 자동으로 붙인다.
 	@PreAuthorize("hasAuthority('SCOPE_course:read')")
-	//토큰에 포함되어 있는 user_name 클래임 값과 getCourseById가 반환하는 Course 객체에 포함돼 있는 author 값을 비교한다.
 	@PostAuthorize("@getAuthor.apply(returnObject, principal.claims['user_name'])")
 	public Optional<Course> getCourseById(@PathVariable("id") long courseId) {
 		return courseRepository.findById(courseId);
