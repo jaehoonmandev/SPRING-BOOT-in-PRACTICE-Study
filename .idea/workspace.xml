@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - 리액티브 스프링 부트 [함수형 엔드포인트]">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - RSocket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch08/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/config/CourseConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/src/main/backup/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/model/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/repository/CourseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/test/java/com/manning/sbip/ch08/Ch08ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/src/test/java/com/manning/sbip/ch08/Ch08ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08/src/test/java/com/manning/sbip/ch08/Ch08ApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +96,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch08/src/main/backup",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch08/src/main/java/com/manning/sbip/ch08",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -121,11 +116,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ch08/src/main/backup" />
       <recent name="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08" />
+      <recent name="$PROJECT_DIR$/ch08/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch08/src/main/backup" />
       <recent name="$PROJECT_DIR$/ch08/src/main/java" />
       <recent name="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/config" />
-      <recent name="$PROJECT_DIR$/ch07/src/seve" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -288,7 +283,7 @@
       <workItem from="1696050522357" duration="84920000" />
       <workItem from="1697508761848" duration="2661000" />
       <workItem from="1697511441850" duration="21744000" />
-      <workItem from="1697612907230" duration="3078000" />
+      <workItem from="1697612907230" duration="4649000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -562,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697599977712</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ch08 학습기록 - RSocket">
+      <option name="closed" value="true" />
+      <created>1697616141655</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1697616141655</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="학습기록 - 테이블 관계 설정" />
     <MESSAGE value="학습기록 - 커스텀 실패 분석기" />
     <MESSAGE value="학습기록 - 스프링 커스텀 액추에이터" />
     <MESSAGE value="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]" />
@@ -616,7 +618,8 @@
     <MESSAGE value="ch07 학습기록 - JWT 베어러 토큰 기반 인증/인가 처리" />
     <MESSAGE value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]" />
     <MESSAGE value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]&#10;&gt; 스프링부트 버전에 따른 emebeded mongodb 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]&#10;&gt; 스프링부트 버전에 따른 emebeded mongodb 수정" />
+    <MESSAGE value="ch08 학습기록 - RSocket" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - RSocket" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
