@@ -1,87 +1,59 @@
 package com.manning.sbip.ch08.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import java.time.Duration;
+
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.stereotype.Controller;
 
 import com.manning.sbip.ch08.model.Course;
-import com.manning.sbip.ch08.repository.CourseRepository;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Slf4j
-@RestController
-@RequestMapping("/courses/")
+@Controller
 public class CourseController {
 
-	private CourseRepository courseRepository;
-
-	@Autowired
-	public CourseController(CourseRepository courseRepository) {
-		this.courseRepository = courseRepository;
+	//요청 - 응답 패턴
+	//요청자가 정보를 전송하면 엔드포인트는 사용자에게 정보를 반환해준다.
+	@MessageMapping("request-response")
+	public Mono<Course> requestResponse(final Course course) {
+		log.info("Received request-response course details {} ", course);
+		return Mono.just(new Course("Your course name: " + course.getCourseName())); //결과를 리턴한다.
 	}
 
-	//Flux는 0..N 개의 요소를 방출한다.
-	@GetMapping
-	public Flux<Course> getAllCourses() {
-		return courseRepository.findAll();
+	// 실행 후 망각 패턴.
+	// 요청자가 정보를 전송하면 반환을 기대하지 않으며 엔드포인트는 빈 Mono 객체를 반환한다.
+	@MessageMapping("fire-and-forget")
+	public Mono<Void> fireAndForget(final Course course) {
+		log.info("Received fire-and-forget course details {} ", course);
+		return Mono.empty(); // 빈 Mono 객체를 반환함으로써 요청자는 정보를 받지 않는다.
 	}
 
-	//조회 시 0..1 개의 요소를 방출할 수 있기에 Mono 자료형을 리턴 받는다.
-	@GetMapping("{id}")
-	public Mono<ResponseEntity<Course>> getCourseById(@PathVariable("id") String courseId) {
-		return courseRepository.findById(courseId)
-				.map(course -> ResponseEntity.ok(course))//조회 결과가 있다면 ResponseEntity로 감싸서 HTTP 200을 반환.
-				.defaultIfEmpty(ResponseEntity.notFound().build());// 없다면 404 반환.
+	// 요청 - 스트림 패턴
+	// 요청자가 정보를 전송하면 엔드포인트는 데이터를 수정해서 1초 단위로 연달아 반환
+	@MessageMapping("request-stream")
+	public Flux<Course> requestStream(final Course course) {
+		log.info("Received request-stream course details {} ", course);
+		return Flux.interval(Duration.ofSeconds(1))// 주기를 1초마다로 설정.
+				.map(index -> new Course("Your course name: " + course.getCourseName() + ". Response #" + index))
+				.log();
 	}
 
-	@GetMapping("category/{name}")
-	public Flux<Course> getCourseByCategory(@PathVariable("name") String category) {
-		return courseRepository.findAllByCategory(category)
-				.doOnError(e -> log.error("Failed to create course", e.getMessage())); // 에러 발생 시 메시지를 콘솔 로그에 출력.
+	// 채널 패턴
+	// 요청자가 스트림을 전송하면 엔드포인트는 데이터를 수정해서 호출자가 지정한 시간 단위로 연달아 반환.
+	// 요청자는 Flux의 delayElements() 메서드를 사용해서 시가능ㄹ 지정.
+	// 요청자와 엔드포인트 모두 스트림 데이터를 전송 가능.
+	@MessageMapping("stream-stream")
+	public Flux<Course> channel(final Flux<Integer> settings) {
+		log.info("Received stream-stream (channel) request... ");
+		
+		return settings.doOnNext(setting -> log.info("Requested interval is {} seconds", setting))
+				.doOnCancel(() -> log.warn("Client cancelled the channel"))
+				.switchMap(setting ->
+						Flux.interval(Duration.ofSeconds(setting)) // 사용자가 지정한 시간을 주기로.
+								.map(index -> new Course("Spring. Response #"+index)))
+				.log();
 	}
-
-	//생성.
-	@PostMapping
-	public Mono<Course> createCourse(@RequestBody Course course) {
-		return courseRepository.save(course)
-				.doOnSuccess(updatedCourse -> log.info("Successfully created course", updatedCourse)) // 생성에 성공한 Course 객체 콘솔 출력.
-				.doOnError(e -> log.error("Failed to create course", e.getMessage()));
-	}
-
-	@PutMapping("{id}")
-	public Mono<ResponseEntity<Course>> updateCourse(@PathVariable("id") String courseId, @RequestBody Course course) {
-
-		return this.courseRepository.findById(courseId).flatMap(existingCourse -> {
-			existingCourse.setName(course.getName());
-			existingCourse.setRating(course.getRating());
-			existingCourse.setCategory(course.getCategory());
-			existingCourse.setDescription(course.getDescription());
-			return this.courseRepository.save(existingCourse);
-		}).map(updatedCourse -> ResponseEntity.ok(updatedCourse)).defaultIfEmpty(ResponseEntity.notFound().build())
-				.doOnError(e -> log.error("Failed to update course", e.getMessage()));
-
-	}
-
-	@DeleteMapping("{id}")
-	public Mono<ResponseEntity<Course>> deleteCourseById(@PathVariable("id") String courseId) {
-		return this.courseRepository.findById(courseId).flatMap(
-				course -> this.courseRepository.deleteById(course.getId()).then(Mono.just(ResponseEntity.ok(course))))
-				.defaultIfEmpty(ResponseEntity.notFound().build());
-	}
-
-	@DeleteMapping
-	public Mono<Void> deleteCourses() {
-		return courseRepository.deleteAll();
-	}
-
 }
