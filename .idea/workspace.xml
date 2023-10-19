@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - RSocket">
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - 웹소켓 통신">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08/src/main/backup/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/model/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08/src/test/java/com/manning/sbip/ch08/Ch08ApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/ch05">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/ch09">
       <ProjectState />
     </projectState>
   </component>
@@ -58,6 +59,7 @@
         <option value="HTML File" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -92,20 +94,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch08/src/main/java/com/manning/sbip/ch08",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch09/WarToWildFly/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15429688",
     "project.structure.side.proportion": "0.5555556",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -116,11 +119,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08" />
-      <recent name="$PROJECT_DIR$/ch08/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch08/src/main/backup" />
-      <recent name="$PROJECT_DIR$/ch08/src/main/java" />
-      <recent name="$PROJECT_DIR$/ch08/src/main/java/com/manning/sbip/ch08/config" />
+      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src" />
+      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src/main/java/com/mannig/sbip/wartowildfly" />
+      <recent name="$PROJECT_DIR$/ch09/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch09/src/main/java/com/manning/sbip/ch09" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -149,7 +152,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Ch08Application">
+  <component name="RunManager" selected="Spring Boot.WarToWildFlyApplication">
     <configuration name="Ch07ApplicationTest.testPostCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch07" />
       <extension name="coverage">
@@ -238,6 +241,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ch09Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ch09" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch09.Ch09Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ch09Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ch09" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch09.Ch09Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CourseTrackerSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ch05" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch05.CourseTrackerSpringBootApplication" />
@@ -245,9 +262,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WarToWildFlyApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="WarToWildFly" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.wartowildfly.WarToWildFlyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarToWildFlyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="WarToWildFly" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mannig.sbip.wartowildfly.WarToWildFlyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.Ch07ApplicationTest.testPostCourse" />
       <item itemvalue="JUnit.Ch07ApplicationTest.testRetrieveCourse" />
+      <item itemvalue="Spring Boot.WarToWildFlyApplication" />
+      <item itemvalue="Spring Boot.WarToWildFlyApplication (1)" />
+      <item itemvalue="Spring Boot.Ch09Application" />
+      <item itemvalue="Spring Boot.Ch09Application (1)" />
       <item itemvalue="Spring Boot.Ch08Application" />
       <item itemvalue="Spring Boot.Ch05Application" />
       <item itemvalue="Spring Boot.CourseTrackerSpringBootApplication" />
@@ -283,7 +318,8 @@
       <workItem from="1696050522357" duration="84920000" />
       <workItem from="1697508761848" duration="2661000" />
       <workItem from="1697511441850" duration="21744000" />
-      <workItem from="1697612907230" duration="4649000" />
+      <workItem from="1697612907230" duration="6592000" />
+      <workItem from="1697681816184" duration="5976000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -565,11 +601,34 @@
       <option name="project" value="LOCAL" />
       <updated>1697616141655</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="ch08 학습기록 - 웹소켓 통신">
+      <option name="closed" value="true" />
+      <created>1697617830420</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1697617830420</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-websocket" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -594,7 +653,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="학습기록 - 커스텀 실패 분석기" />
     <MESSAGE value="학습기록 - 스프링 커스텀 액추에이터" />
     <MESSAGE value="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]" />
     <MESSAGE value="학습기록 - 스프링 액추에이터 메트릭스 커스텀" />
@@ -619,7 +677,8 @@
     <MESSAGE value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]" />
     <MESSAGE value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]&#10;&gt; 스프링부트 버전에 따른 emebeded mongodb 수정" />
     <MESSAGE value="ch08 학습기록 - RSocket" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - RSocket" />
+    <MESSAGE value="ch08 학습기록 - 웹소켓 통신" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - 웹소켓 통신" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
