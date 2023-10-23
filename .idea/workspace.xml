@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포.">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch09,ch10 학습기록 - &#10;&gt; dockerfile을 이용한 이미지 생성 및 컨테이너 실행.&#10;&gt; 코틀린을 이용한 변수, 함수, 클래스 선언">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch09/manifest.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/src/main/kotlin/com/manning/sbip/ch10/controller/CourseController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/src/main/kotlin/com/manning/sbip/ch10/controller/CourseController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/src/main/resources/templates/add-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/src/main/resources/templates/add-course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch10/src/main/resources/templates/update-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/ch10/src/main/resources/templates/update-course.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch10/src/main/resources",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch10/src/main/kotlin/com/manning/sbip/ch10/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,7 +113,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15429688",
     "project.structure.side.proportion": "0.5555556",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -122,11 +124,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch10/src/main/kotlin/com/manning/sbip/ch10/controller" />
       <recent name="$PROJECT_DIR$/ch10/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch06/src/main/resources" />
       <recent name="$PROJECT_DIR$/ch10/src/main/kotlin/com/manning/sbip/ch10" />
       <recent name="$PROJECT_DIR$/ch09" />
-      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -332,7 +334,8 @@
       <workItem from="1697612907230" duration="6592000" />
       <workItem from="1697681816184" duration="12362000" />
       <workItem from="1697784084521" duration="290000" />
-      <workItem from="1697784430001" duration="7430000" />
+      <workItem from="1697784430001" duration="7879000" />
+      <workItem from="1698045189233" duration="1349000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -630,7 +633,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697696794120</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="ch09,ch10 학습기록 - &#10;&gt; dockerfile을 이용한 이미지 생성 및 컨테이너 실행.&#10;&gt; 코틀린을 이용한 변수, 함수, 클래스 선언">
+      <option name="closed" value="true" />
+      <created>1698043864539</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1698043864539</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]" />
     <MESSAGE value="학습기록 - 스프링 액추에이터 메트릭스 커스텀" />
     <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 적용, 로그인 페이지 맵핑" />
     <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 웹 서큐리티 커스터마이징" />
@@ -699,7 +709,8 @@
     <MESSAGE value="ch08 학습기록 - RSocket" />
     <MESSAGE value="ch08 학습기록 - 웹소켓 통신" />
     <MESSAGE value="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포." />
-    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포." />
+    <MESSAGE value="ch09,ch10 학습기록 - &#10;&gt; dockerfile을 이용한 이미지 생성 및 컨테이너 실행.&#10;&gt; 코틀린을 이용한 변수, 함수, 클래스 선언" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch09,ch10 학습기록 - &#10;&gt; dockerfile을 이용한 이미지 생성 및 컨테이너 실행.&#10;&gt; 코틀린을 이용한 변수, 함수, 클래스 선언" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

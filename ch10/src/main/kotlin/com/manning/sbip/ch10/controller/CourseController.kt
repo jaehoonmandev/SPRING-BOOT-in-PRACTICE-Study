@@ -37,6 +37,7 @@ class CourseController(private val courseService: CourseService) {
         }
         courseService.createCourse(course)
         model["courses"] = courseService.findAllCourses();
+        //model.addAttribute("courses", courseService.findAllCourses())
         return "redirect:/index"
     }
 
