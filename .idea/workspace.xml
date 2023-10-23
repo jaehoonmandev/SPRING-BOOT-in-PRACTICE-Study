@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - 웹소켓 통신">
+    <list default="true" id="998019ff-e351-4832-b85e-689be3af2856" name="Changes" comment="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포.">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch09/manifest.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +62,7 @@
         <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="spring-beans.schema" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -99,16 +102,16 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch09/WarToWildFly/src/main/resources",
+    "last_opened_file_path": "/Users/jaehoonpark/Desktop/project/SPRING-BOOT-in-PRACTICE-Study/ch10/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15429688",
     "project.structure.side.proportion": "0.5555556",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -119,11 +122,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch10/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch10/src/main/kotlin/com/manning/sbip/ch10" />
+      <recent name="$PROJECT_DIR$/ch09" />
       <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src/main/resources" />
       <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src" />
-      <recent name="$PROJECT_DIR$/ch09/WarToWildFly/src/main/java/com/mannig/sbip/wartowildfly" />
-      <recent name="$PROJECT_DIR$/ch09/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch09/src/main/java/com/manning/sbip/ch09" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -152,7 +155,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WarToWildFlyApplication">
+  <component name="RunManager" selected="Spring Boot.Ch10Application">
     <configuration name="Ch07ApplicationTest.testPostCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch07" />
       <extension name="coverage">
@@ -255,6 +258,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ch10Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ch10" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch10.Ch10Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CourseTrackerSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ch05" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.manning.sbip.ch05.CourseTrackerSpringBootApplication" />
@@ -279,6 +289,7 @@
     <list>
       <item itemvalue="JUnit.Ch07ApplicationTest.testPostCourse" />
       <item itemvalue="JUnit.Ch07ApplicationTest.testRetrieveCourse" />
+      <item itemvalue="Spring Boot.Ch10Application" />
       <item itemvalue="Spring Boot.WarToWildFlyApplication" />
       <item itemvalue="Spring Boot.WarToWildFlyApplication (1)" />
       <item itemvalue="Spring Boot.Ch09Application" />
@@ -319,7 +330,9 @@
       <workItem from="1697508761848" duration="2661000" />
       <workItem from="1697511441850" duration="21744000" />
       <workItem from="1697612907230" duration="6592000" />
-      <workItem from="1697681816184" duration="5976000" />
+      <workItem from="1697681816184" duration="12362000" />
+      <workItem from="1697784084521" duration="290000" />
+      <workItem from="1697784430001" duration="7430000" />
     </task>
     <task id="LOCAL-00001" summary="1. 학습기록">
       <option name="closed" value="true" />
@@ -609,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697617830420</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포.">
+      <option name="closed" value="true" />
+      <created>1697696794120</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1697696794120</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +674,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="학습기록 - 스프링 커스텀 액추에이터" />
     <MESSAGE value="학습기록 - 스프링 액추에이터[HealthIndicator 커스텀]" />
     <MESSAGE value="학습기록 - 스프링 액추에이터 메트릭스 커스텀" />
     <MESSAGE value="ch05 학습기록 - 스프링 시큐리티 적용, 로그인 페이지 맵핑" />
@@ -678,7 +698,8 @@
     <MESSAGE value="ch08 학습기록 - 리액티브 스프링 부트 [annotated]&#10;&gt; 스프링부트 버전에 따른 emebeded mongodb 수정" />
     <MESSAGE value="ch08 학습기록 - RSocket" />
     <MESSAGE value="ch08 학습기록 - 웹소켓 통신" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - 웹소켓 통신" />
+    <MESSAGE value="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포." />
+    <option name="LAST_COMMIT_MESSAGE" value="ch08 학습기록 - 배포 연습&#10;&gt; JAR, WAR 패키징&#10;&gt; 와일드플라이 자동배포." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

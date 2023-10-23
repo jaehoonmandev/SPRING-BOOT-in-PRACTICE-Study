@@ -14,11 +14,13 @@
         <option value="$PROJECT_DIR$/ch08/pom.xml" />
         <option value="$PROJECT_DIR$/ch09/pom.xml" />
         <option value="$PROJECT_DIR$/ch09/WarToWildFly/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ch04/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09/WarToWildFly/pom.xml" />
       </set>
     </option>
   </component>

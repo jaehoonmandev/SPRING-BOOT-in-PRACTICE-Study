@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch09" />
         <module name="ch07" />
+        <module name="ch10" />
         <module name="ch08" />
-        <module name="WarToWildFly" />
         <module name="ch05" />
         <module name="ch06" />
       </profile>
@@ -19,13 +19,13 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="WarToWildFly" options="-parameters" />
       <module name="ch04" options="-parameters" />
       <module name="ch05" options="-parameters" />
       <module name="ch06" options="-parameters" />
       <module name="ch07" options="-parameters" />
       <module name="ch08" options="-parameters" />
       <module name="ch09" options="-parameters" />
+      <module name="ch10" options="-parameters" />
     </option>
   </component>
 </project>
